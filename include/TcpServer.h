@@ -23,7 +23,7 @@ class TcpServer
 
   ~TcpServer(void);
 
-  void disconnect(void);
+  void peerDisconnected(void);
 
   private:
 

@@ -247,20 +247,31 @@ void TcpServer::serviceCliConnection(void)
 
 /*****************************************************************************
 
-  Name: disconnect
+  Name: peerDisconnected
 
   Purpose: The purpose of this function is is to notify the server
   processing routine that the link partner has terminated a connection.
 
-  Calling Sequence: disconnect() Inputs: None.  Outputs: None.  *****************************************************************************/
-void TcpServer::disconnect(void)
+  Calling Sequence: peerDisconnected()
+
+   Inputs:
+
+     None.
+
+   Outputs:
+
+     None.
+
+*****************************************************************************/
+void TcpServer::peerDisconnected(void)
  { 
+
   // Indicate that the link partner is gone.
   peerConnected = false;
 
   return;
 
-} // disconnect
+} // peerDisconnected
 
 /*****************************************************************************
 

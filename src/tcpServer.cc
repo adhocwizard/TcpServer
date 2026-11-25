@@ -73,7 +73,7 @@ void connectionProcedure(void *arg)
     if (count == 0)
     {
       // Notify server of link partner disconnect.
-      networkInterfacePtr->disconnect();
+      networkInterfacePtr->peerDisconnected();
 
       // Bail out.
       done = true;
