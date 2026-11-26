@@ -272,6 +272,9 @@ void TcpServer::peerDisconnected(void)
   // Close our side of the connection.
   close(connectFileDescriptor);
 
+  // Keep it safe.
+  connectFileDescriptor = 0;
+
   return;
 
 } // peerDisconnected
