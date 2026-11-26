@@ -269,6 +269,9 @@ void TcpServer::peerDisconnected(void)
   // Indicate that the link partner is gone.
   peerConnected = false;
 
+  // Close our side of the connection.
+  close(connectFileDescriptor);
+
   return;
 
 } // peerDisconnected
